@@ -22,5 +22,7 @@ public class LogicaPersonaje : MonoBehaviour
         y = Input.GetAxis("Vertical");
         transform.Rotate(0, x * Time.deltaTime * velRot, 0);
         transform.Translate(0, 0, y * Time.deltaTime * velMov);
+        anim.SetFloat("VelX", x);
+        anim.SetFloat("VelY", y);
     }
 }
